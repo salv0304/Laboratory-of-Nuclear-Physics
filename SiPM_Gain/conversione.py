@@ -5,12 +5,15 @@ import math
 
 #Prima esperienza
 
+
 #guadagno 40dB
+#put here the fit parameters you got
 p0=-37.51
 p1=0.7074
 err_p0 = 0.2973
 err_p1 = 0.005167
 
+#conversion and error propagation
 C_D= p1 * e
 C_D_err = err_p1* e
 V_br= -p0/p1
