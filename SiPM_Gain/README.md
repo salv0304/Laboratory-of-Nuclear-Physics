@@ -1,8 +1,9 @@
 # SiPM gain analysis
 
-The gain is obtained by measuring the mean distance between the peaks in a histogram and converting ADC units into charge.
+The gain is obtained by measuring the mean distance between the peaks in a histogram and converting ADC units into charge. 
+In the repo you will find the root macro gain_all.txt, a simple script conversione.py to convert fit parameters into the breakdown voltage of the SiPM, and the data files.
 
-## How to use the macro
+## How to use the macro gain_all.C
 
 -Ensure the input file is in .txt format and contains the data to be analyzed.
 
