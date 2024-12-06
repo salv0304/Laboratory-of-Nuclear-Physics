@@ -6,8 +6,8 @@
 void gain_all(){
 
   //Numero di punti del file da aprire.
-  Int_t n = 3000;                    // guadagno 40 (40) [ 55V n=3045 ;56V n=3011; 58V n=3045; 60V n=3000; 62V n=3000]
-  				    // guadagno 40 (46) [54V n=3045; 58 V n= 3040 (scartato); 56V n=3000, 55V n=3045;
+  Int_t n = 3000;                    
+  				    
   //Vettori ampiezza e conteggio.
   Float_t adc[n], count[n];              //le due variabili
 
@@ -26,7 +26,7 @@ void gain_all(){
   g->GetYaxis()->SetTitle("Counts");
 
   
-  TSpectrum *s = new TSpectrum();                     //classe molto potente che permette ad esempio di cercare i picchi (search)
+  TSpectrum *s = new TSpectrum();                     //classe che permette ad esempio di cercare i picchi (search)
 
   int nPoints = g->GetN();
   TH1F *h = new TH1F("h","Selezione Picchi",500,-500,8000);
@@ -43,13 +43,13 @@ void gain_all(){
   h->GetYaxis()->SetTitle("Counts");
 
   float rmin, rmax;
-  int irange = 200;
+  int irange = 200; 
   
   //Cerca i picchi che hanno ampiezza > soglia*massima_ampiezza_nell'istogramma);
   //modificare l'ultimo parametro per togliere i picchi indesiderati! (soglia)
   
-  Int_t nPeaks = s->Search(h,1,"",0.01);        		//(46) [54V = 1, 0.01; 55V = 1, 0.1, 56V = 1, 0.1]
-  //cout << nPeaks << endl;            			//(40) [58V = 1, 0.1; 60V = 1, 0.4, 62V = 1, 0.1
+  Int_t nPeaks = s->Search(h,1,"",0.01);        		
+  //cout << nPeaks << endl;            			
   Double_t *xpeaks;
   Double_t mean[nPeaks], sigma[nPeaks];
   xpeaks = s->GetPositionX();
