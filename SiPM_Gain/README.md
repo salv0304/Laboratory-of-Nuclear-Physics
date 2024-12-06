@@ -13,3 +13,5 @@ The gain is obtained by measuring the mean distance between the peaks in a histo
   -Select the appropriate peaks.
   
   -Configure the Gaussian fit for accurate analysis.
+
+  After you run the macro, the terminal will prompt you to input the gain of the digitizer (in dB). The digitizer gain (in dB) is specified in the name of the .txt file provided.
