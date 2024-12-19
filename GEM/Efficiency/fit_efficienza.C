@@ -30,7 +30,7 @@ void fit_efficienza(){
   g->SetLineWidth(2);     
   
   g->GetXaxis()->SetRangeUser(3250,3800);
-  g->GetYaxis()->SetRangeUser(0,1.3);
+  g->GetYaxis()->SetRangeUser(0,1.6);
     
     //Definition of the fit function
     TF1 *sigmoid = new TF1("sigmoid", "[0] / (1 + exp(-[1]*(x-[2]))) + [3]", 3250, 3800);
