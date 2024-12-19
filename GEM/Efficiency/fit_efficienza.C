@@ -37,8 +37,7 @@ void fit_efficienza(){
 
     //Initial guess
     sigmoid->SetParameters(1, 0.0035,3500 , 0); // Amplitude, Slope, Midpoint, traslazione
-    // Fit della funzione // (TFitResultPtr è semplicemente un oggetto che salva i parametri del fit)
-    TFitResultPtr fitResult1 = g->Fit(sigmoid, "S"); // "S" per ottenere il risultato del fit 
+    TFitResultPtr fitResult1 = g->Fit(sigmoid, "S");  
     
     //Visualize the fit
     TCanvas *c1 = new TCanvas("c1", "Sigmoid Fit");
