@@ -2,4 +2,4 @@
 
 This repository contains the ROOT macros used for data analysis in the course Laboratory of Nuclear and Subnuclear Physics II at the University of Pavia.
 
-The original scripts were provided by the course professors. In this repository, I have uploaded the modified versions that I worked on during the course.
+The original scripts were provided by the course professors. In this repository, I have uploaded my personal modified versions that I used during the course.
